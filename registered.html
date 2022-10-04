@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>記帳系統 - 註冊</title>
+    <script>
+      function ifPwdEmpty(){
+        var newpassword=document.getElementById("psw");
+        var repasswourd=document.getElementById("repw");
+        if(newpassword.value!=repasswourd.value){
+          alert("您輸入的密碼不一致，請重新輸入！");
+          repasswourd.value="";
+          repasswourd.focus();
+          return false;
+          }
+      }
+    
+      window.onload = function show_password(){
+      var oPass = document.getElementById('psw');
+      var oBtn = document.getElementById('btn');
+      var orePass = document.getElementById('repw');
+      var a = true;
+      
+      oBtn.onclick = function show_password(){
+        if(a){
+          oPass.type = 'text';
+          orePass.type = 'text';
+          a = false;
+          oBtn.value = '隱藏密碼';
+        }
+        else{
+          oPass.type = 'Password';
+          orePass.type = 'Password';
+          a = true;
+          oBtn.value = '顯示密碼';
+        }
+      };
+    };
+    </script>
+    <style>
+    /* Style all input fields */
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 0px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+
+    /* Style the submit button */
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    body {
+      background-color: antiquewhite;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 30%;
+      margin: 0 auto ;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style the container for inputs */
+    /* Add padding to containers */
+    .container {
+      background-color: white;
+      border-radius:4px;
+      padding: 16px;
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password],input[type=email]{
+      width: 100%;
+      padding: 12px;
+      margin: 5px 0 10px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin: 0 0 10 0px;
+    }
+
+
+    /* Set a style for the submit button */
+    .registerbtn {
+      background-color: #2160F1;
+      color: white;
+      padding: 14px 20px;
+      margin: 34px 0 0 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      border-radius: 4px;
+    }
+
+    .show_password {
+      background-color: #656565;
+      color: white;
+      padding: 14px 20px ;
+      margin: 24px 0 0 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      border-radius: 4px;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 4px 0 4px 0;
+    }
+
+    img.avatar {
+      width: 20%;
+      border-radius: 50%;
+    }
+      
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }	
+    </style>
+  </head>
+  <body>
+    
+    <style>
+          html {
+              height: 100%;
+          }
+
+          body {
+              background-image: url("./images/DSC07806.JPG");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-position: center;
+              background-size: cover;
+          }
+    </style>
+    
+    <div class="imgcontainer">
+        <img src="./images/dollor.png" alt="Avatar" class="avatar">
+      </div>	
+    <form action="registered.php" method="post" id="reg" onSubmit="return ifPwdEmpty();">
+      <div class="container" style="border-bottom-right-radius:0px; border-bottom-left-radius:0px;">
+        <label style="font-size: 24px;"><b>註冊</b></label>
+        <p>請填寫以下資料以建立新帳戶</p>
+        <hr>
+
+        <label for="email"><b>您的Email</b></label>
+        <input type="email" placeholder="請輸入電子郵件 ex:123@xxx.com.tw" name="email" id="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"  required="required">
+      
+        <label for="nickname"><b>您的暱稱</b><label style="color: gray; font-size: 10px;"> 暱稱最多20個字元</label></label>
+        <input type="text" placeholder="請輸入暱稱 ex:乂煞氣a豬豬乂" name="nickname" id="nickname" maxlength="20" required="required">
+      
+        <label for="psw"><b>密碼</b><label style="color: gray; font-size: 10px;"> 密碼至少為8個字元，且不可含特殊符號</label></label>
+        <input type="password" id="psw" name="psw" pattern="[a-zA-Z0-9]{8,}" title="密碼至少為8個或更多字元，且不可含特殊符號" placeholder="請輸入密碼" required="required">
+      
+        
+        <label for="repw"><b>再次輸入密碼</b></label>
+        <input type="password" placeholder="再次輸入密碼" name="repw" id="repw" required="required">
+        <input type="button" value="顯示密碼" id="btn" class="show_password">
+        <button type="submit" class="registerbtn"><b>註冊</b></button>
+      
+      
+      </div>
+      
+      <div class="container signin" style="border-top-left-radius:0px; border-top-right-radius:0px;">
+        <p>已經註冊帳戶了嗎？ <a href="index.php">登入</a></p>
+      </div>
+    </form>
+
+  </body>
+</html>

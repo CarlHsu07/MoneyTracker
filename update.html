@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>記帳系統</title>
+	
+
+	
+<script src="https://kit.fontawesome.com/7da68b3635.js" crossorigin="anonymous"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif; width: 55%;
+	margin: 0 auto ;}
+* {box-sizing: border-box;border-radius:4px}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.icon {
+  padding: 14px;
+  background: dodgerblue;
+  color: antiquewhite;
+  min-width: 150px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline:none;
+  border: 0px;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #0BBF6C;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+ 
+}
+.button02{
+  background-color: #2160F1;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  
+}
+	
+.button03{
+  background-color: #FF7C26;
+  color: black;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  margin:0% 0% 10% 81%;
+  
+}
+	
+.button02:hover{
+  opacity: 1;
+}
+
+.button03:hover{
+  opacity: 1;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+	
+
+	
+a {
+  color:#063EEA;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+}	
+</style>
+</head>
+
+<body>
+	<style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url(./images/wow.JFIF);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+
+<form action="#" method="post" name="bookkeeping">
+<div class="input-container">
+<font face="微軟正黑體" color="black" size="5" >請修改您的記帳明細</font>
+</div>
+	
+<div class="input-container">
+<i class="fas fa-sort-amount-down-alt icon"></i>
+<select name="classifi" class="input-field" required="required">
+  <option value="" disabled selected hidden><font face="微軟正黑體">請選擇分類</font></option>
+　<option value="food">食物</option>
+　<option value="trans">交通</option>
+　<option value="inter">娛樂</option>
+　<option value="shoping">購物</option>
+  <option value="other">其他</option>
+</select>
+</div>	
+
+<div class="input-container">
+<i class="fas fa-calendar-week icon"></i>
+<input type="date" name="date" id="date" class="input-field" required="required">
+</div>
+
+<div class="input-container">
+<i class="fas fa-book-open icon"></i>
+<input name="bookkeeping_name" class="input-field"  type="text" placeholder="帳目名稱" required="required">
+</div>
+	
+<div class="input-container">
+<i class="fas fa-dollar-sign icon"></i>
+<input class="input-field" type="number" min="1" placeholder="金額" name="money" required="required">
+</div>
+	
+		
+<font face="微軟正黑體" size="2"><button type="submit" class="button02"><b>確認修改</b></button></font>	
+	
+<font face="微軟正黑體" size="2"><button type="" class="btn" onclick="javascript:window.opener=null;window.close();"><b>取消</b></button></font>
+</form>
+
+
+	
+</body>
+</html>

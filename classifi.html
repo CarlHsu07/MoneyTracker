@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>新增分類</title>
+
+
+  <script>
+    var myWindow;
+
+    function openWin() {
+      myWindow = window.open("/update.html", "myWindow", "width=900, height=700");
+
+    }
+
+    function closeWin() {
+      myWindow.close();
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      width: 44%;
+      margin: 0 auto;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-radius: 4px
+    }
+
+    .input-container {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding: 90px 10px 10px 10px;
+    }
+
+    .icon {
+      padding: 2px;
+      /* background: ; */
+      color: black;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: 0px;
+    }
+
+    .input-field:focus {
+      border: 2px solid dodgerblue;
+    }
+
+    /* Set a style for the submit button */
+    .btn {
+      background-color: #0BBF6C;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+
+    }
+
+    .button02 {
+      background-color: #2160F1;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+
+    }
+
+    .button03 {
+      background-color: #FF7C26;
+      color: black;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+      opacity: 0.9;
+      margin: 0% 0% 10% 81%;
+
+    }
+
+    .button02:hover {
+      opacity: 1;
+    }
+
+    .button03:hover {
+      opacity: 1;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+
+
+
+    a {
+      color: #063EEA;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {}
+  </style>
+</head>
+
+<body width="100%" border="1">
+
+
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      background-image: url(./images/wow.JFIF);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+
+
+
+  <div class="input-container">
+    <form action="" method="post">
+      <label for="text"><b>新增分類</b></label>
+      <input type="text" name="classifi" id="classifi" class="input-field" placeholder="例如：電子產品">
+
+      <font face="微軟正黑體" size="2"><button type="submit" class="button02"><b>確認</b></button></font>
+      <font face="微軟正黑體" size="2"><button type="button" class="btn"
+          onclick="javascript:window.opener=null;window.close();"><b>取消</b></button></font>
+    </form>
+  </div>
+
+</body>
+
+</html>
